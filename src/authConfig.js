@@ -2,9 +2,9 @@
 
 export const msalConfig = {
     auth: {
-      clientId: "c295c344-53f1-46eb-b822-5668017f77ab", // Replace with your app's Client ID
-      authority: "https://login.microsoftonline.com/07d01194-b034-4ebf-b001-b65182a8fa39", // Replace with your Tenant ID
-      redirectUri: "https://localhost:3000", // The redirect URI you set in the Azure portal
+      clientId: process.env.CLIENT_ID, // Replace with your app's Client ID
+      authority: process.env.AUTHORITY_URL, // Replace with your Tenant ID
+      redirectUri: process.env.REDIRECT_URL, // The redirect URI you set in the Azure portal
     },
     cache: {
       cacheLocation: "sessionStorage", // This configures where your cache will be stored
